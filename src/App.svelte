@@ -20,19 +20,6 @@
 	</h1>
 {/if}
 <main>
-<!--	<div id = "users">-->
-<!--		<Users/>-->
-<!--	</div>-->
-<!--	<div>-->
-<!--		<h1>Random dogs</h1>-->
-<!--		<Dog/>-->
-<!--	</div>-->
-<!--	<ul>-->
-<!--		{#each users as user}-->
-<!--			<li>{user.id} - {user.name}</li>-->
-
-<!--		{/each}-->
-<!--	</ul>-->
 
 </main>
 

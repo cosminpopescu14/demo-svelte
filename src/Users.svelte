@@ -35,14 +35,6 @@
         {/each}
         </tbody>
     </Datatable>
-<!--    <h1>Users List</h1>-->
-<!--    {#each users as user}-->
-<!--        <ul>-->
-<!--            <li>{user.id} - {user.name}</li>         <li>{user.email}</li>     </ul>-->
-<!--    {:else}-->
-<!--        &lt;!&ndash; this block renders when users.length === 0 &ndash;&gt;-->
-<!--        <p>loading...</p>-->
-<!--    {/each}-->
 
 <style>
     th:first-child{width:72px;}

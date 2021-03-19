@@ -36,6 +36,17 @@
         if (fullName === "Serafina Moise")
             alert(`Hello ${fullName}!`)
     }
+
+    //updating arrays and objects
+    // svelte reactivity is triggered by assigments
+    let numbers = [1, 2, 3, 4];
+    function addNumber() {
+        //numbers.push(numbers.length + 1);
+        //numbers = numbers //redundant, even the ide complains
+        numbers = [...numbers, numbers.length + 1] //more idioamtic
+    }
+
+    $: sum = numbers.reduce((t, n) => t + n, 0);
 </script>
 
 <button on:click={handleClick}> <!-- this update the value from the button in reactive way-->
@@ -46,3 +57,9 @@
 
 <button on:click={generateRandomName}>Generate new name</button>
 <h1>Hi my name is {fullName}</h1>
+
+<p>{numbers.join(' + ')} = {sum}</p>
+
+<button on:click={addNumber}>
+    Add a number
+</button>

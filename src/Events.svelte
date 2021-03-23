@@ -1,4 +1,7 @@
 <script>
+    import Inner from './Inner.svelte'
+    import CustomButton from './CustomButton.svelte';
+
     let m = { x: 0, y: 0 };
 
     function handleMousemove(event) {
@@ -8,6 +11,11 @@
 
     function handleClick() {
         alert('no more alerts')
+    }
+
+    //consume the event from Inner
+    function handleMessage(event) {
+        alert(event.detail.text)
     }
 </script>
 
@@ -42,3 +50,15 @@
 <button on:click|once={handleClick}>
     Click me
 </button>
+
+<article>
+    Event from Inner component
+    Events component is listening to the messages dispatched by Inner using on:message directive.
+    The nam can be wherever, but iy must be the the same as in dispatch
+</article>
+<Inner on:greet={handleMessage}/>
+
+<article>
+    Event forwarding for DOM events
+</article>
+<CustomButton on:click={handleClick}/>

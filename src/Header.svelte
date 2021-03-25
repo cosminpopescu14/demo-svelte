@@ -6,6 +6,7 @@
     import Logic from "./Logic.svelte";
     import Events from "./Events.svelte";
     import Bindings from "./Bindings.svelte";
+    import Lifecycle from "./Lifecycle.svelte";
 
     export let menu = 1;
 </script>
@@ -23,7 +24,8 @@
     <li><a href="Props.svelte" on:click|preventDefault={() => (menu = 4)}>Props</a></li> |
     <li><a href="Logic.svelte" on:click|preventDefault={() => (menu = 5)}>Logic</a></li> |
     <li><a href="Events.svelte" on:click|preventDefault={() => (menu = 6)}>Events</a></li> |
-    <li><a href="Bindings.svelte" on:click|preventDefault={() => (menu = 7)}>Bindings</a></li>
+    <li><a href="Bindings.svelte" on:click|preventDefault={() => (menu = 7)}>Bindings</a></li> |
+    <li><a href="Lifecycle.svelte" on:click|preventDefault={() => (menu = 8)}>Lifecycle</a></li>
 </ul>
 
 {#if menu === 1}
@@ -40,6 +42,8 @@
     <Events/>
 {:else if menu === 7}
     <Bindings/>
+{:else if menu === 8}
+    <Lifecycle/>
 {:else}
     <h1>
         Page Not Found
